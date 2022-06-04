@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32510.428
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "p48比较两字符串杨氏矩阵查找数", "p48比较两字符串杨氏矩阵查找数\p48比较两字符串杨氏矩阵查找数.vcxproj", "{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Debug|x64.ActiveCfg = Debug|x64
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Debug|x64.Build.0 = Debug|x64
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Debug|x86.ActiveCfg = Debug|Win32
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Debug|x86.Build.0 = Debug|Win32
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Release|x64.ActiveCfg = Release|x64
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Release|x64.Build.0 = Release|x64
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Release|x86.ActiveCfg = Release|Win32
+		{DDC57F98-A5F4-4A13-9FCB-9EC91A6B8330}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26A8D798-A4CC-4184-91A0-F394B3E87289}
+	EndGlobalSection
+EndGlobal
