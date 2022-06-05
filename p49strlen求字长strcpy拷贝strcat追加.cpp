@@ -1,11 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define _CRT_SECURE_NO_DEPRECATE£»
+#define _CRT_SECURE_NO_DEPRECATEï¼›
 #include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
 #include<string.h>
 
-////1¡¢strlenÊµÏÖ·½Ê½
+////1ã€strlenå®ç°æ–¹å¼
 //int  my_strlen(char* p)
 //{
 //	assert(p != NULL);
@@ -27,12 +27,12 @@
 //	return 0;
 //}
 
-////2¡¢strlen ÎªÎŞ·ûºÅĞÎÊı
+////2ã€strlen ä¸ºæ— ç¬¦å·å½¢æ•°
 //int main()
 //{
 //	if(strlen("abc")-strlen("abcdef")>0)
 //	{
-//		printf("hehe -3µÄ¾ø¶ÔÖµÊÇÕıÊı");
+//		printf("hehe -3çš„ç»å¯¹å€¼æ˜¯æ­£æ•°");
 //	} else
 //	{
 //		printf("haha");
@@ -42,7 +42,7 @@
 
 
 //
-////3.¿½±´ ×ó²à¶ÔÆä
+////3.æ‹·è´ å·¦ä¾§å¯¹å…¶
 //int main()
 //{
 //	char arr1[30] = "abcdef";
@@ -56,7 +56,7 @@
 
 
 //
-////4.¿½±´ÊµÏÖ·½Ê½
+////4.æ‹·è´å®ç°æ–¹å¼
 //
 //char* my_strcpy(char* a, char* b)
 //{
@@ -78,7 +78,7 @@
 
 
  
-////5.×·¼Ó
+////5.è¿½åŠ 
 //int main()
 //{
 //
@@ -95,7 +95,7 @@
 
 
 
-//6.×·¼ÓÊµÏÖ·½Ê½
+//6.è¿½åŠ å®ç°æ–¹å¼
  char* my_strcat(char* a, const char* b)
 {
 	 char* ret = a;
