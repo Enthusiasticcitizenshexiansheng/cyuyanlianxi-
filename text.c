@@ -24,7 +24,7 @@ int main()
 //初始化
 	InitContact(&con);
 
-
+	
 
 
 	do
@@ -34,17 +34,23 @@ int main()
 		scanf_s("%d",&input);
 		switch (input)
 		{
-		case 1:
+		case ADD:
 			AddContact(&con); 
 			break;
-		case 2:break;
-		case 3:break;
-		case 4:break;
-		case 5:
+		case DEL:
+			DelContact(&con);
+			break;
+		case SEARCH:
+			SearchContact(&con);
+			break;
+		case MODIFY:
+			xiugai(&con);
+			break;
+		case SHOW:
 			ShowContact(&con);
 			break;
-		case 6:break;
-		case 0:
+		case SORT:break;
+		case EXIT:
 			printf("退出\n"); break;
 		default:
 			printf("选择出错\n");

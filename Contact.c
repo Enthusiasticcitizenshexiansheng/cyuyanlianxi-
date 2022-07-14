@@ -56,3 +56,116 @@ void ShowContact(const struct Contact* ps)
 		}
 	}
 }
+
+
+
+
+
+
+//内部封装查找
+static int Findname(const struct Contact* ps,char name[30])
+{
+	int i = 0;
+	for (i = 0; i < ps->size; i++)
+	{
+		if (0 == strcmp(ps->data[i].name, name));
+		{return i; }
+	}
+	return -1;
+}
+
+
+
+
+
+//删除
+void DelContact(struct Contact* ps) 
+{
+
+	char name[30];
+	printf("删谁？：");
+	scanf("%s", name);
+	//查找
+	//返回下标 或 -1
+	int pos = Findname(ps, name);
+
+	if (pos==-1)
+	{
+		printf("不存在要删除的人");
+	}
+	else
+	{
+		//删除
+		int j = 0;
+		for (j = pos; j < ps->size-1; j++)
+		{
+			ps->data[j] = ps->data[j + 1];
+}	ps->size--;
+		printf("删除成功");
+	}
+
+}
+
+
+
+//3查找
+void SearchContact(const struct Contact* ps)
+{
+	char name[30];
+	printf("查找人的名字：");
+	scanf("%s", name);
+	int pos = Findname(ps, name);
+	if(pos==-1)
+	{
+		printf("不存在这个人");
+	}
+	else
+	{
+		printf("%-20s\t%-4s\t%-5s\t%-12s\t%-20s\n", "姓名", "年龄", "性别", "电话", "地址");
+		{
+			printf("%-20s\t%-4d\t%-5s\t%-12s\t%-20s\n",
+				ps->data[pos].name,
+				ps->data[pos].age,
+				ps->data[pos].sex,
+				ps->data[pos].tele,
+				ps->data[pos].add
+			);
+		}
+
+	}
+
+
+}
+
+
+
+
+
+
+//修改
+void xiugai(struct Contact* ps) {
+	char name[30];
+	printf("修改人的名字：");
+	scanf("%s", name);
+	int pos =Findname(ps, name);
+	if(pos==-1)
+	{
+		printf("不存在这个人");
+	}
+	else
+	{
+		printf("名字：");
+		scanf("%s", ps->data[pos].name);
+		printf("年龄：");
+		scanf_s("%d", &(ps->data[pos].age));
+		printf("性别");
+		scanf("%s", ps->data[pos].sex);
+		printf("电话：");
+		scanf("%s", ps->data[pos].tele);
+		printf("地址：");
+		scanf("%s", ps->data[pos].add);
+
+		ps->size++;
+		printf("修改成功\n");
+	}
+}
