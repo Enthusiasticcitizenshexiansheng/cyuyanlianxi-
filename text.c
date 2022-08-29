@@ -11,7 +11,7 @@ void menu()
 	printf("*1.add           2.del****\n");
 	printf(" 3.search        4.modify\n");
 	printf("*5.show          6.sort  \n*");
-	printf("*0.exit************\n");
+	printf("* 7.save              0.exit  ***\n");
 
 }
 
@@ -51,7 +51,11 @@ int main()
 			break;
 		case SORT:break;
 		case EXIT:
+			SaveContact(&con);
 			printf("ÍË³ö\n"); break;
+		
+		case SAVE:
+			SaveContact(&con); break;
 		default:
 			printf("Ñ¡Ôñ³ö´í\n");
 			break;

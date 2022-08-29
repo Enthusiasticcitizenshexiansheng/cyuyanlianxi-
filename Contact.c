@@ -1,13 +1,43 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 #include"Contact.h"
-
+#include<errno.h>
 
 void InitContact(struct Contact* ps)
 {
 	memset(ps->data, 0, sizeof(ps -> data));
 	ps->size = 0;
+
+	//加载已有信息
+	LoadContact(ps);
+
 }
+
+//加载已有信息
+void LoadContact(struct Contact* ps)
+{
+	struct PeoInfo tmp = { 0 };
+	FILE* pfRead = fopen("contact.dat", "rb");
+	if (pfRead == NULL)
+	{
+		printf("LoadContact :%s\n", strerror(errno));
+	}
+
+	//读取
+	while (fread(&tmp, sizeof(struct PeoInfo), 1, pfRead))
+	{
+		ps->data[ps->size] = tmp;
+		ps->size++;
+	};
+
+
+	fclose(pfRead);
+	pfRead = NULL;
+}
+
+
+
+
 
 void AddContact(struct Contact* ps)
 {
@@ -168,4 +198,36 @@ void xiugai(struct Contact* ps) {
 		ps->size++;
 		printf("修改成功\n");
 	}
+}
+
+
+
+
+
+
+
+
+
+//存数据
+
+void SaveContact(struct Contact* ps)
+{
+	FILE* pfwrite = fopen("contact.dat", "wb");
+	if (pfwrite == NULL)
+	{
+		printf("%s\n", strerror(errno));
+		return;
+	}
+
+
+	//数据写入文件
+	int i = 0;
+	for (i = 0; i < ps->size; i++)
+	{
+		fwrite(&(ps->data[i]), sizeof(struct PeoInfo), 1, pfwrite);
+	
+	}
+
+	fclose(pfwrite);
+	pfwrite = NULL;
 }
